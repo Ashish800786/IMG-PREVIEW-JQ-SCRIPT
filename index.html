@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Image Preview Script</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- site icon -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+   </head>
+  <body>
+    
+    
+    <img src="" id="preview" height="150px;"/>
+    <input type="file" name="img" id="img" onclick="preview_img(event)"/>
+  </body>
+  <script>
+    function preview_img(event)
+    {
+      console.log(event.target.files[0]);
+      var image_url=URL.createObjectURL(event.target.files[0]);
+      $('#preview').attr('src',image_url);
+    }
+  </script>
+  <html>

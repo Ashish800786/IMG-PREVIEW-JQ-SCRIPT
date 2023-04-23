@@ -18,9 +18,16 @@
    </head>
   <body>
     
-    
-    <img src="" id="preview" height="150px;"/>
-    <input type="file" name="img" id="img" onchange="preview_img(event)"/>
+    <div style="height: 500px;border:5px double gray;padding: 10px;">
+      <center>
+        <img src="" id="preview" height="500px"/>
+      </center>
+    </div>
+    <br/>
+    <hr/>
+    <center>
+      <input type="file" name="img" id="img" onchange="preview_img(event)"/>
+    </center>
   </body>
   <script>
     function preview_img(event)
